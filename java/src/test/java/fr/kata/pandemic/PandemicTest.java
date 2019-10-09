@@ -13,13 +13,6 @@ public class PandemicTest {
     @Test
     public void should_infect_city() {
         World world = new World("PARIS:BLUE","MADRID:BLUE","ESSEN:BLUE","MILAN:BLUE","LONDON:BLUE");
-        world.link("PARIS").to("MADRID");
-        world.link("PARIS").to("ESSEN");
-        world.link("PARIS").to("MILAN");
-        world.link("PARIS").to("LONDON");
-        world.link("ESSEN").to("LONDON");
-        world.link("MILAN").to("ESSEN");
-        world.link("MILAN").to("LONDON");
 
         world.infect("PARIS");
 
@@ -37,11 +30,6 @@ public class PandemicTest {
         World world = new World("PARIS:BLUE","MADRID:BLUE","ESSEN:BLUE","MILAN:BLUE","LONDON:BLUE");
         world.link("PARIS").to("MADRID");
         world.link("PARIS").to("ESSEN");
-        world.link("PARIS").to("MILAN");
-        world.link("PARIS").to("LONDON");
-        world.link("ESSEN").to("LONDON");
-        world.link("MILAN").to("ESSEN");
-        world.link("MILAN").to("LONDON");
 
         world.infect("PARIS");
         world.infect("PARIS");
@@ -93,7 +81,6 @@ public class PandemicTest {
         world.link("ESSEN").to("LONDON");
         world.link("MILAN").to("ESSEN");
         world.link("MILAN").to("LONDON");
-        world.link("ST-PETERSBURG").to("ESSEN");
 
         world.infect("PARIS");
         world.infect("PARIS");
@@ -145,6 +132,8 @@ public class PandemicTest {
         world.link("PARIS").to("ALGERS");
         world.link("ESSEN").to("LONDON");
         world.link("MILAN").to("ESSEN");
+        world.link("MADRID").to("LONDON");
+        world.link("MILAN").to("LONDON");
         world.link("MILAN").to("LONDON");
         world.link("ST-PETERSBURG").to("ESSEN");
         world.link("MILAN").to("ISTANBUL");
